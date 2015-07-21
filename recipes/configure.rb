@@ -8,7 +8,7 @@ if my_ip == first_ip
     secret_access_key node['opsworks_private_dns']['secret_access_key']
     ip node['opsworks']['instance']['private_ip']
     hosts([
-      node['opsworks_private_dns']['sub_domain']
+      node['opsworks_private_dns']['hostname']
     ])
     action :upsert
   end
